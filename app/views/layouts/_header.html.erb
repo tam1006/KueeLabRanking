@@ -8,6 +8,9 @@
         </li>
         <% if user_signed_in? %>
             <li class="nav-item active">
+                <%= link_to '成績入力', "#", class: 'nav-link' %>
+            </li>
+            <li class="nav-item active">
                 <%= link_to '設定', edit_user_registration_path, class: 'nav-link' %>
             </li>
             <li class="nav-item active">

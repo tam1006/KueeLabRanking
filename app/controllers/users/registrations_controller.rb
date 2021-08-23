@@ -11,6 +11,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    is_username_blank?
+    debugger
     super
   end
 

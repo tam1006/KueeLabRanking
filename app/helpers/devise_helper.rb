@@ -16,4 +16,10 @@ module DeviseHelper
     end
     html.html_safe
   end
+
+  def is_username_blank?
+    if params[:user][:username].blank?
+      params[:user][:username] = "匿名"
+    end
+  end
 end

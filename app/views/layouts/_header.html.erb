@@ -1,0 +1,27 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Kuee Lab Ranking", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item active">
+            <%= link_to 'トップ', root_path, class: 'nav-link' %>
+        </li>
+        <% if user_signed_in? %>
+            <li class="nav-item active">
+                <%= link_to '設定', edit_user_registration_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item active">
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+        <% else %>
+            <li class="nav-item active">
+                <%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item active">
+                <%= link_to "ログイン", new_user_session_path, class: 'nav-link' %>
+            </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

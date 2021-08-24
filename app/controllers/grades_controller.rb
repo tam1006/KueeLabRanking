@@ -1,4 +1,4 @@
-class GradeController < ApplicationController
+class GradesController < ApplicationController
 
   def new
     @grade = Grade.new

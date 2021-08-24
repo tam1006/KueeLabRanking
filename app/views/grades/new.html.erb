@@ -8,6 +8,7 @@
 </div>
 
 <%= form_for @grade do |f| %>
+  <%= render 'grades/error_messages', model: f.object %>
   <div class="row text-center ">
     <div class="col-md-1">
       <div class="form-group">

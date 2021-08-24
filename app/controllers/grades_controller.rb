@@ -9,12 +9,12 @@ class GradesController < ApplicationController
     if @grade.save
       redirect_to root_path
     else
-      render 'new'
+      render 'grades/new'
     end
   end
 
   private
     def grade_params
-      params.require(:grade).permit(:score)
+      params.require(:grade).permit(:AA, :A, :B, :C, :D, :E, :F)
     end
 end

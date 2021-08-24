@@ -8,5 +8,11 @@
         sample application.
     </h2>
 
+    <% @grades.each do |grade|  %>
+    <div>
+        <h2>A+ | <%= grade.AA %></h2>
+        <h2>A | <%= grade.A %></h2>
+    </div>
+    <% end %>
 </div>
 

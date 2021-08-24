@@ -4,6 +4,14 @@ class GradesController < ApplicationController
     @grade = Grade.new
   end
 
+  def index
+    @grades = Grade.all.order(created_at: 'desc')
+  end
+
+  def edit
+
+  end
+
   def create
     @grade = Grade.new(grade_params)
     if @grade.save

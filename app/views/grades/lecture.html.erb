@@ -69,3 +69,50 @@
 工学序論 1前集中 1
 電気法規 3前集中 2
 電波法規 4後集中 2
+
+
+  <div class="col-md-1">
+    <label for="validationCustom01" class="form-label">A</label>
+    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  </div>
+  <div class="col-md-1">
+    <label for="validationCustom01" class="form-label">B</label>
+    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  </div>
+  <div class="col-md-1">
+    <label for="validationCustom01" class="form-label">C</label>
+    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  </div>
+  <div class="col-md-1">
+    <label for="validationCustom01" class="form-label">D</label>
+    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  </div>
+  <div class="col-md-1">
+    <label for="validationCustom01" class="form-label">E</label>
+    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  </div>
+  <div class="col-md-1">
+    <label for="validationCustom01" class="form-label">F</label>
+    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  </div>
+
+
+<%= form_for @grade , url: grade_path do |f| %>
+<form class="row g-3 needs-validation" novalidate>
+  <% f.fields_for :score do |s| %>
+    <div class="col-md-1">
+      <%= s.label :AA %>
+      <%= s.text_field :AA %>
+    </div>
+    <div class="col-md-1">
+      <%= s.label :A %>
+      <%= s.text_field :A %>
+    </div>
+  <% end %>
+
+  <div class="col-12">
+    <%= f.submit "送信" %>
+    <button type="submit" class="btn btn-primary">送信</button>
+  </div>
+</form>
+<% end %>

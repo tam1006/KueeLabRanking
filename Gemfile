@@ -33,6 +33,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'rexml'
 gem 'devise'
+gem 'pry-rails'
+gem 'pry-doc'
 
 # 日本語化
 gem 'rails-i18n'

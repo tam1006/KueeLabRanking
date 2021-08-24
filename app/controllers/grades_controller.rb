@@ -2,6 +2,7 @@ class GradesController < ApplicationController
 
   def new
     @grade = Grade.new
+    @grade.build_score
   end
 
   def create
@@ -15,6 +16,8 @@ class GradesController < ApplicationController
 
   private
     def grade_params
-      params.require(:grade).permit(:score)
+      params.require(:grade).permit(score_attributes:
+        [:AA, :A, :B, :C, :D, :E, :F]
+      )
     end
 end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'grade/new'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations'
   }
+  resources :grades
   root 'homes#index'
 end

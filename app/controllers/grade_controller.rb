@@ -6,6 +6,11 @@ class GradeController < ApplicationController
 
   def create
     @grade = Grade.new(grade_params)
+    if @grade.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   private

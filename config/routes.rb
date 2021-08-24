@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations'
   }
   resources :grades
-  root 'homes#index'
+  root 'grades#index'
 end

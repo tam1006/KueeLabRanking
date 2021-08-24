@@ -115,3 +115,14 @@ aside {
         }
     }
 }
+
+/* input */
+.error {
+    display: none;
+}
+
+input:invalid + .error {
+    display: block;
+    color: red;
+    font-size: 0.9em;
+}

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lecture: MyString
+  GPA: 1.5
+  scores: 1
+
+two:
+  lecture: MyString
+  GPA: 1.5
+  scores: 1

@@ -9,9 +9,17 @@
     </h2>
 
     <% @grades.each do |grade|  %>
-    <div>
-        <h2>A+ | <%= grade.AA %></h2>
-        <h2>A | <%= grade.A %></h2>
+    <div class="container container-m">
+        <div class="row">
+            <p class="mb-0" >name | <%= user_name_is? grade %></p>
+            <p class="mb-0" >A+ | <%= grade.AA %></p>
+            <p class="mb-0" >A  | <%= grade.A %></p>
+            <p class="mb-0" >B  | <%= grade.B %></p>
+            <p class="mb-0" >C  | <%= grade.C %></p>
+            <p class="mb-0" >D  | <%= grade.D %></p>
+            <p class="mb-0" >E  | <%= grade.E %></p>
+            <p class="mb-0" >F  | <%= grade.F %></p>
+        </div>
     </div>
     <% end %>
 </div>

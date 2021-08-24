@@ -11,7 +11,7 @@ class GradesController < ApplicationController
   def edit
     @grade = Grade.find_by(user_id: current_user[:id])
     unless @grade
-      render 'new'
+      redirect_to new_grade_path
     end
   end
 
@@ -21,7 +21,8 @@ class GradesController < ApplicationController
     if @grade.save
       redirect_to root_path
     else
-      render 'new'
+      # flash: { error: @grade.errors.full_messages }
+      render new_grade_path
     end
   end
 
@@ -30,10 +31,10 @@ class GradesController < ApplicationController
     if @grade.update(grade_params)
       redirect_to root_path
     else
-      render 'edit'
+      redirect_to edit_grade_path
     end
   end
-  
+
   private
     def grade_params
       params.require(:grade).permit(:AA, :A, :B, :C, :D, :E, :F)

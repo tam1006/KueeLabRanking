@@ -7,41 +7,56 @@
 
 </div>
 
-
 <%= form_for @grade do |f| %>
-<form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-1">
-    <%= f.label "A+" %>
-    <%= f.number_field :AA, placeholder: 'A+' %>
+  <div class="row text-center ">
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "A+" %>
+        <%= f.number_field :AA, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "A" %>
+        <%= f.number_field :A, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "B" %>
+        <%= f.number_field :B, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "C" %>
+        <%= f.number_field :C, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "D" %>
+        <%= f.number_field :D, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "E" %>
+        <%= f.number_field :E, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <%= f.label "F" %>
+        <%= f.number_field :F, class: 'form-control' %>
+      </div>
+    </div>
   </div>
-  <div class="col-md-1">
-    <label for="validationCustom01" class="form-label">A</label>
-    <input type="number" class="form-control" id="validationCustom01" value ="" required>
+  <div class="row">
+    <div class="col-2">
+      <div class="form-group">
+        <%= f.submit "提出", class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
-  <div class="col-md-1">
-    <label for="validationCustom01" class="form-label">B</label>
-    <input type="number" class="form-control" id="validationCustom01" value ="" required>
-  </div>
-  <div class="col-md-1">
-    <label for="validationCustom01" class="form-label">C</label>
-    <input type="number" class="form-control" id="validationCustom01" value ="" required>
-  </div>
-  <div class="col-md-1">
-    <label for="validationCustom01" class="form-label">D</label>
-    <input type="number" class="form-control" id="validationCustom01" value ="" required>
-  </div>
-  <div class="col-md-1">
-    <label for="validationCustom01" class="form-label">E</label>
-    <input type="number" class="form-control" id="validationCustom01" value ="" required>
-  </div>
-  <div class="col-md-1">
-    <label for="validationCustom01" class="form-label">F</label>
-    <input type="number" class="form-control" id="validationCustom01" value ="" required>
-  </div>
-
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">送信</button>
-  </div>
-</form>
 <% end %>
-

@@ -7,22 +7,28 @@
             <%= link_to 'トップ', root_path, class: 'nav-link' %>
         </li>
         <% if user_signed_in? %>
-            <li class="nav-item active">
-                <%= link_to '成績入力', new_grade_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item active">
-                <%= link_to '設定', edit_user_registration_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item active">
-                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-            </li>
+          <% if is_registered_grades? %>
+          <li class="nav-item active">
+              <%= link_to '成績編集', edit_grade_path(@grade[:user_id]), class: 'nav-link' %>
+          </li>
+          <% else %>
+          <li class="nav-item active">
+              <%= link_to '成績入力', new_grade_path, class: 'nav-link' %>
+          </li>
+          <% end %>
+          <li class="nav-item active">
+              <%= link_to '設定', edit_user_registration_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          </li>
         <% else %>
-            <li class="nav-item active">
-                <%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
-            </li>
-            <li class="nav-item active">
-                <%= link_to "ログイン", new_user_session_path, class: 'nav-link' %>
-            </li>
+          <li class="nav-item active">
+              <%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+              <%= link_to "ログイン", new_user_session_path, class: 'nav-link' %>
+          </li>
         <% end %>
       </ul>
     </nav>

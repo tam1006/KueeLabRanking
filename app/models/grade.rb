@@ -1,5 +1,4 @@
 class Grade < ApplicationRecord
-  validates :score, presence: true, numericality: {
-    only_integer: true, in: 0..122
-  }
+  has_many :scores
+
 end

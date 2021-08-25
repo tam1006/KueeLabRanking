@@ -9,13 +9,13 @@
 }
 // max-width
 
-.mw-md {
-    max-width: 576px;
-}
+// .mw-md {
+//     max-width: 576px;
+// }
 
-.mw-xl {
-    max-width: 1200px;
-}
+// .mw-xl {
+//     max-width: 1200px;
+// }
 // 「ログインしました」などのフラッシュ用スタイル
 
 .alert-notice {
@@ -78,6 +78,8 @@ p {
 #logo {
     float: left;
     margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
     font-size: 1.7em;
     color: white;
     letter-spacing: -1px;

@@ -9,18 +9,20 @@
     </h2>
 </div>
 
-<div class="container">
-    <% @grades.each do |grade|  %>
+<div class="center">
+<% @grades.each do |grade|  %>
+    <div class="container">
         <div class="row">
-            <div class="col-sm" >name | <%= user_name_is? grade %></div>
-            <div class="col-sm" >A+ | <%= grade.AA %></div>
-            <div class="col-sm" >A  | <%= grade.A %></div>
-            <div class="col-sm" >B  | <%= grade.B %></div>
-            <div class="col-sm" >C  | <%= grade.C %></div>
-            <div class="col-sm" >D  | <%= grade.D %></div>
-            <div class="col-sm" >F  | <%= grade.F %></div>
-            <div class="col-sm" >GPA  | <%= grade.GPA %></div>
+            <p class="col-sm" >name | <%= user_name_is? grade %></p>
+            <p class="col-sm" >A+ | <%= grade.AA %></p>
+            <p class="col-sm" >A  | <%= grade.A %></p>
+            <p class="col-sm" >B  | <%= grade.B %></p>
+            <p class="col-sm" >C  | <%= grade.C %></p>
+            <p class="col-sm" >D  | <%= grade.D %></p>
+            <p class="col-sm" >F  | <%= grade.F %></p>
+            <p class="col-sm" >GPA  | <%= grade.GPA %></p>
         </div>
-    <% end %>
+    </div>
+<% end %>
 </div>
 

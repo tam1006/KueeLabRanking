@@ -1,6 +1,7 @@
+<div class="container">
 <%= form_for @grade do |f| %>
   <%= render 'grades/error_messages', model: f.object %>
-  <div class="row text-center ">
+  <div class="row text-center justify-content-center">
     <div class="col-sm-1">
       <div class="form-group">
         <%= f.label "A+" %>
@@ -46,3 +47,4 @@
     </div>
   </div>
 <% end %>
+</div>

@@ -1,28 +1,21 @@
 <%= render 'layouts/flash_messages' %>
-<div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
 
-    <h2>
-        This is the home page for the
-        <a href="heeps://railstutorial.jp/">Ruby on Rails Tutorial</a>>
-        sample application.
-    </h2>
-</div>
-
-<div class="center">
-<% @grades.each do |grade|  %>
-    <div class="container">
-        <div class="row">
-            <p class="col-sm" >name | <%= user_name_is? grade %></p>
-            <p class="col-sm" >A+ | <%= grade.AA %></p>
-            <p class="col-sm" >A  | <%= grade.A %></p>
-            <p class="col-sm" >B  | <%= grade.B %></p>
-            <p class="col-sm" >C  | <%= grade.C %></p>
-            <p class="col-sm" >D  | <%= grade.D %></p>
-            <p class="col-sm" >F  | <%= grade.F %></p>
-            <p class="col-sm" >GPA  | <%= grade.GPA %></p>
-        </div>
-    </div>
-<% end %>
-</div>
+<main class="container">
+  <div class="bg-light p-5 rounded">
+        <% @grades.each do |grade|  %>
+            <div class="container">
+                <div class="row">
+                    <p class="col-sm" >name | <%= user_name_is? grade %></p>
+                    <p class="col-sm" >A+ | <%= grade.AA %></p>
+                    <p class="col-sm" >A  | <%= grade.A %></p>
+                    <p class="col-sm" >B  | <%= grade.B %></p>
+                    <p class="col-sm" >C  | <%= grade.C %></p>
+                    <p class="col-sm" >D  | <%= grade.D %></p>
+                    <p class="col-sm" >F  | <%= grade.F %></p>
+                    <p class="col-sm" >GPA  | <%= grade.GPA %></p>
+                </div>
+            </div>
+        <% end %>
+  </div>
+</main>
 

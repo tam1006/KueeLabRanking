@@ -9,7 +9,7 @@
         <% if user_signed_in? %>
           <% if is_registered_grades? %>
           <li class="nav-item active">
-              <%= link_to '成績編集', edit_grade_path(@grade[:user_id]), class: 'nav-link' %>
+              <%= link_to '成績編集', edit_grade_path(@grade[:id]), class: 'nav-link' %>
           </li>
           <% else %>
           <li class="nav-item active">

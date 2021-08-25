@@ -20,22 +20,24 @@ class GradesController < ApplicationController
   def create
     @grade = Grade.new(grade_params)
     if @grade.save
+      flash[:success] = "入力が完了しました"
       redirect_to root_path
     else
-      # flash: { error: @grade.errors.full_messages }
       render new_grade_path
     end
-    debugger
   end
 
   def update
     @grade = Grade.find_by(user_id: current_user[:id])
+    # debugger
     if @grade.update(grade_params)
+      flash[:success] = "入力が完了しました"
       redirect_to root_path
     else
-      redirect_to edit_grade_path
+      # debugger
+      # redirect_to edit_grade_path(@grade[:id]), flash: { error: @grade.errors.full_messages }
+      redirect_to edit_grade_path(@grade[:id])
     end
-    debugger
   end
 
   private

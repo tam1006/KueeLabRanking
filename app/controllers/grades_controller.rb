@@ -7,7 +7,7 @@ class GradesController < ApplicationController
   end
 
   def index
-    @grades = Grade.all.order(created_at: 'desc')
+    @grades = Grade.all.order(GPA: 'desc')
   end
 
   def edit

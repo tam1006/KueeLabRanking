@@ -8,10 +8,15 @@
     <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :username %><br />
     <%= f.text_field :username, class: "form-control" %>
     <small class="form-text text-muted">未入力の場合匿名になります</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :year %><br />
+    <%= f.select :year, [2018, 2019, 2020, 2021], {},  class: "form-control" %>
   </div>
 
   <div class="form-group">

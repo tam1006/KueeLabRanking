@@ -1,4 +1,6 @@
 class GradesController < ApplicationController
+  before_action :calcurate_GPA, only: [:create, :update]
+  before_action :set_user_id, only: [:create, :update]
 
   def new
     @grade = Grade.new
@@ -17,13 +19,13 @@ class GradesController < ApplicationController
 
   def create
     @grade = Grade.new(grade_params)
-    @grade[:user_id] = current_user[:id]
     if @grade.save
       redirect_to root_path
     else
       # flash: { error: @grade.errors.full_messages }
       render new_grade_path
     end
+    debugger
   end
 
   def update
@@ -33,10 +35,35 @@ class GradesController < ApplicationController
     else
       redirect_to edit_grade_path
     end
+    debugger
   end
 
   private
     def grade_params
-      params.require(:grade).permit(:AA, :A, :B, :C, :D, :E, :F)
+      params.require(:grade).permit(:AA, :A, :B, :C, :D, :F, :user_id, :GPA)
+    end
+
+    def calcurate_GPA
+      num_of_lecture = 0
+      gp = 0
+      params[:grade].each do |g|
+        num_of_lecture += g[1].to_i
+        if g[0] == 'AA'
+          gp += 4.3*g[1].to_i
+        elsif g[0] == 'A'
+          gp += 4*g[1].to_i
+        elsif g[0] == 'B'
+          gp += 3*g[1].to_i
+        elsif g[0] == 'C'
+          gp += 2*g[1].to_i
+        elsif g[0] == 'D'
+          gp += 1*g[1].to_i
+        end
+      end
+      params[:grade][:GPA] = (gp/num_of_lecture).round(2)
+    end
+
+    def set_user_id
+      params[:grade][:user_id] = current_user[:id]
     end
 end

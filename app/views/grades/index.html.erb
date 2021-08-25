@@ -7,20 +7,20 @@
         <a href="heeps://railstutorial.jp/">Ruby on Rails Tutorial</a>>
         sample application.
     </h2>
+</div>
 
+<div class="container">
     <% @grades.each do |grade|  %>
-    <div class="container container-m">
         <div class="row">
-            <p class="mb-0" >name | <%= user_name_is? grade %></p>
-            <p class="mb-0" >A+ | <%= grade.AA %></p>
-            <p class="mb-0" >A  | <%= grade.A %></p>
-            <p class="mb-0" >B  | <%= grade.B %></p>
-            <p class="mb-0" >C  | <%= grade.C %></p>
-            <p class="mb-0" >D  | <%= grade.D %></p>
-            <p class="mb-0" >E  | <%= grade.E %></p>
-            <p class="mb-0" >F  | <%= grade.F %></p>
+            <div class="col-sm" >name | <%= user_name_is? grade %></div>
+            <div class="col-sm" >A+ | <%= grade.AA %></div>
+            <div class="col-sm" >A  | <%= grade.A %></div>
+            <div class="col-sm" >B  | <%= grade.B %></div>
+            <div class="col-sm" >C  | <%= grade.C %></div>
+            <div class="col-sm" >D  | <%= grade.D %></div>
+            <div class="col-sm" >F  | <%= grade.F %></div>
+            <div class="col-sm" >GPA  | <%= grade.GPA %></div>
         </div>
-    </div>
     <% end %>
 </div>
 

@@ -1,21 +1,43 @@
 <%= render 'layouts/flash_messages' %>
 
-<main class="container">
-  <div class="bg-light p-5 rounded">
+<div class="container">
+  <table id="ranking" class="table table-striped table-bordered" style="width: 1000px;">
+        <thead>
+            <th>名前</th>
+            <th>A+</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>F</th>
+            <th>GPA</th>
+        </thead>
+        <tbody>
         <% @grades.each do |grade|  %>
-            <div class="container">
-                <div class="row">
-                    <p class="col-sm" >name | <%= user_name_is? grade %></p>
-                    <p class="col-sm" >A+ | <%= grade.AA %></p>
-                    <p class="col-sm" >A  | <%= grade.A %></p>
-                    <p class="col-sm" >B  | <%= grade.B %></p>
-                    <p class="col-sm" >C  | <%= grade.C %></p>
-                    <p class="col-sm" >D  | <%= grade.D %></p>
-                    <p class="col-sm" >F  | <%= grade.F %></p>
-                    <p class="col-sm" >GPA  | <%= grade.GPA %></p>
-                </div>
-            </div>
+            <tr>
+                <td><%= user_name_is? grade %></td>
+                <td><%= grade.AA %></td>
+                <td><%= grade.A %></td>
+                <td><%= grade.B %></td>
+                <td><%= grade.C %></td>
+                <td><%= grade.D %></td>
+                <td><%= grade.F %></td>
+                <td><%= grade.GPA %></td>
+            </tr>
         <% end %>
-  </div>
-</main>
+        </tbody>
+  </table>
+</div>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $.extend( $.fn.dataTable.defaults, {
+        language: {
+            url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+        }
+    });
+    $('#ranking').DataTable({
+        searching: false,
+    });
+  });
+</script>

@@ -13,3 +13,9 @@ import '../stylesheets/application';
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("channels")
+require('datatables.net-bs4')
+
+import $ from 'jquery';
+global.$ = jQuery;

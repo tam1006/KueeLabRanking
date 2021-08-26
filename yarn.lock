@@ -914,10 +914,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@popperjs/core@^2.9.3":
-  version "2.9.3"
-  resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.9.3.tgz"
-  integrity sha512-xDu17cEfh7Kid/d95kB6tZsLOmSWKCZKtprnhVepjsSaCij+lM3mItSJDuuHDMbCWTh8Ejmebwb+KONcCJ0eXQ==
+"@popperjs/core@2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.0.0-alpha.1.tgz#027e88eb5d890b87942b3188cdc99a50786ad854"
+  integrity sha512-AEw/mCzKVPweZMy6DAeLQT2xDUtoHWL4I2v2/091Yr3M6RL5v2I786/3Ln1W19eO5/FoimUUtI6L8CpAp06Txw==
 
 "@rails/actioncable@^6.0.0":
   version "6.1.4"
@@ -2325,6 +2325,21 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/cyclist/-/cyclist-1.0.1.tgz"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+
+datatables.net-bs4@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/datatables.net-bs4/-/datatables.net-bs4-3.2.2.tgz#47860d8ccb24724309fe300de72eafd7201bbac6"
+  integrity sha1-R4YNjMskckMJ/jAN5y6v1yAbusY=
+  dependencies:
+    datatables.net ">=1.10.13"
+    jquery ">=1.7"
+
+datatables.net@>=1.10.13:
+  version "1.10.25"
+  resolved "https://registry.yarnpkg.com/datatables.net/-/datatables.net-1.10.25.tgz#fc03a239e08f91d1d64ba101aa54daf4086d162c"
+  integrity sha512-y0+C7all+MC/h1acwnjErhaJPjYGKpWTvbXrfEUbR8+P+nnhgjNn5nL1udgsTwBObMhlj1KITNBRrM/ZLSoj+Q==
+  dependencies:
+    jquery ">=1.7"
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -3839,7 +3854,7 @@ jest-worker@^26.5.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jquery@^3.6.0:
+jquery@>=1.7, jquery@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==

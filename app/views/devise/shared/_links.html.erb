@@ -1,10 +1,10 @@
 <div class="form-group gap-3">
   <%- if controller_name != 'sessions' %>
-    <%= link_to t(".sign_in"), new_session_path(resource_name), class: 'btn btn-lg btn-info my-2' %><br />
+    <%= link_to t(".sign_in"), new_session_path(resource_name), class: 'btn btn-lg btn-outline-secondary my-2' %><br />
   <% end -%>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <%= link_to t(".sign_up"), new_registration_path(resource_name), class: 'btn btn-lg btn-info my-2' %><br />
+    <%= link_to t(".sign_up"), new_registration_path(resource_name), class: 'btn btn-lg btn-outline-secondary my-2' %><br />
   <% end -%>
 
 <%
@@ -27,7 +27,7 @@
 
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to t('.sign_in_with_provider', provider: OmniAuth::Utils.camelize(provider)), omniauth_authorize_path(resource_name, provider), class: 'btn btn-lg btn-info' %><br />
+      <%= link_to t('.sign_in_with_provider', provider: OmniAuth::Utils.camelize(provider)), omniauth_authorize_path(resource_name, provider), class: 'btn btn-lg btn-outline-secondary' %><br />
     <% end -%>
   <% end -%>
 </div>

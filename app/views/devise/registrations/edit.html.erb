@@ -22,6 +22,11 @@
       <div class="form-group col-sm-6">
         <%= f.select :year, [2018, 2019, 2020, 2021], {},  class: "form-control" %>
       </div>
+      
+      <%= f.label :lab, class:"col-sm-6 col-form-label text-end" %><br/>
+      <div class="form-group col-sm-6">
+        <%= f.select :lab, return_labs, {},  class: "form-control" %>
+      </div>
 
       <%= f.label :password, class:"col-sm-6 col-form-label text-end" %><br/>
       <div class="form-group col-sm-6">

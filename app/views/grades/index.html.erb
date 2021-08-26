@@ -1,32 +1,34 @@
 <%= render 'layouts/flash_messages' %>
 
 <div class="container">
-  <table id="ranking" class="table table-striped table-bordered" style="width: 1000px;">
-        <thead>
-            <th>名前</th>
-            <th>A+</th>
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
-            <th>D</th>
-            <th>F</th>
-            <th>GPA</th>
-        </thead>
-        <tbody>
-        <% @grades.each do |grade|  %>
-            <tr>
-                <td><%= user_name_is? grade %></td>
-                <td><%= grade.AA %></td>
-                <td><%= grade.A %></td>
-                <td><%= grade.B %></td>
-                <td><%= grade.C %></td>
-                <td><%= grade.D %></td>
-                <td><%= grade.F %></td>
-                <td><%= grade.GPA %></td>
-            </tr>
-        <% end %>
-        </tbody>
-  </table>
+    <div class="justify-content-center">
+    <table id="ranking" class="table table-striped table-bordered" style="width: 1000px;">
+            <thead>
+                <th>名前</th>
+                <th>A+</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>F</th>
+                <th>GPA</th>
+            </thead>
+            <tbody>
+            <% @grades.each do |grade|  %>
+                <tr>
+                    <td><%= user_name_is? grade %></td>
+                    <td><%= grade.AA %></td>
+                    <td><%= grade.A %></td>
+                    <td><%= grade.B %></td>
+                    <td><%= grade.C %></td>
+                    <td><%= grade.D %></td>
+                    <td><%= grade.F %></td>
+                    <td><%= grade.GPA %></td>
+                </tr>
+            <% end %>
+            </tbody>
+    </table>
+    </div>
 </div>
 
 <script type="text/javascript">

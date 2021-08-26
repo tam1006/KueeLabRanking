@@ -12,4 +12,12 @@ module GradesHelper
       return user[:username]
     end
   end
+
+  def user_lab_is?(grade)
+    user = User.find_by(id: grade[:user_id])
+    # debugger
+    if user
+      return user[:lab]
+    end
+  end
 end

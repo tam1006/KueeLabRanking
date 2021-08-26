@@ -12,11 +12,12 @@
                 <th>D</th>
                 <th>F</th>
                 <th>GPA</th>
+                <th>研究室</th>
             </thead>
             <tbody>
             <% @grades.each do |grade|  %>
                 <tr>
-                    <td><%= user_name_is? grade %></td>
+                    <td><%= grade.user[:username] %></td>
                     <td><%= grade.AA %></td>
                     <td><%= grade.A %></td>
                     <td><%= grade.B %></td>
@@ -24,6 +25,7 @@
                     <td><%= grade.D %></td>
                     <td><%= grade.F %></td>
                     <td><%= grade.GPA %></td>
+                    <td><%= grade.user[:lab] %></td>
                 </tr>
             <% end %>
             </tbody>

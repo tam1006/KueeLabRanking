@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_083059) do
+ActiveRecord::Schema.define(version: 2021_08_26_051708) do
 
   create_table "grades", force: :cascade do |t|
     t.string "lecture"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_083059) do
     t.string "user_id", default: "", null: false
     t.string "username"
     t.integer "year"
+    t.string "lab"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

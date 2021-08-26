@@ -7,7 +7,7 @@ class GradesController < ApplicationController
   end
 
   def index
-    @grades = Grade.all.order(GPA: 'desc')
+    @grades = Grade.all
   end
 
   def edit

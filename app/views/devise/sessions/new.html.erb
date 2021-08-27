@@ -13,7 +13,7 @@
     <div class="row m-5">
       <div class="col-sm-2"></div>
       <div class="col-sm-6 col-12">
-        <%= f.label :email ,class: "col-sm-3 col-12 col-form-label text-end"%>
+        <%= f.label :email ,class: "col-sm-3 col-12 col-form-label text-sm-end text-start"%>
         <div class="form-group col-sm-9 col-12">
           <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', required: true %>
         </div>
@@ -24,7 +24,7 @@
     <div class="row m-5">
       <div class="col-sm-2"></div>
       <div class="col-sm-6 col-12">
-        <%= f.label :password ,class: "col-sm-3 col-12 col-form-label text-end" %>
+        <%= f.label :password ,class: "col-sm-3 col-12 col-form-label text-sm-end text-start" %>
         <div class="form-group col-sm-9 col-12">
           <%= f.password_field :password, autocomplete: 'current-password',
                                     class: 'form-control', 

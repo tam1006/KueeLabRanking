@@ -1,4 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href='/' id="logo">Kuee Lab Ranking</a>
 
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0 head-link">
+        <li class="nav-item">
+            <%= link_to 'トップ', root_path, class: 'nav-link active' %>
+        </li>
+        <% if user_signed_in? %>
+          <% if is_registered_grades? %>
+          <li class="nav-item">
+              <%= link_to '成績編集', edit_grade_path(@grade[:id]), class: 'nav-link active' %>
+          </li>
+          <% else %>
+          <li class="nav-item">
+              <%= link_to '成績入力', new_grade_path, class: 'nav-link active' %>
+          </li>
+          <% end %>
+          <li class="nav-item">
+              <%= link_to '設定', edit_user_registration_path, class: 'nav-link active' %>
+          </li>
+          <li class="nav-item">
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link active' %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+              <%= link_to "新規登録", new_user_registration_path, class: 'nav-link active' %>
+          </li>
+          <li class="nav-item">
+              <%= link_to "ログイン", new_user_session_path, class: 'nav-link active' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <header>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
@@ -34,5 +70,4 @@
       </div>
     </div>
   </nav>
-
 </header>

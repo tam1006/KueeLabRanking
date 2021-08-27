@@ -1,12 +1,12 @@
 <header>
   <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" aria-label="Third navbar example">
     <div class="container-fluid">
-      <a class="navbar-brand" href='/' id="logo">Kuee Lab Ranking</a>
+      <a class="navbar-brand col-3 text-center" href='/' id="logo">Kuee Lab Ranking</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarsExample03">
-        <ul class="navbar-nav me-auto mb-2 mb-sm-0 my-text">
+      <div class="collapse navbar-collapse col-9" id="navbarsExample03">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0 my-text text-center">
           <li class="nav-item">
               <%= link_to 'トップ', root_path, class: 'nav-link active' %>
           </li>
@@ -21,7 +21,7 @@
             </li>
             <% end %>
             <li class="nav-item">
-                <%= link_to 'アカウント設定', edit_user_registration_path, class: 'nav-link active' %>
+                <%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link active' %>
             </li>
             <li class="nav-item">
                 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link active' %>

@@ -13,8 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     is_username_blank?
     super
-    # debugger
-  end
+    end
 
   # GET /resource/edit
   def edit

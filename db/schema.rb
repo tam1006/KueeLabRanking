@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_26_051708) do
+ActiveRecord::Schema.define(version: 2021_08_27_132453) do
 
   create_table "grades", force: :cascade do |t|
     t.string "lecture"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2021_08_26_051708) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "user_id", default: "", null: false
     t.string "username"
     t.integer "year"
     t.string "lab"

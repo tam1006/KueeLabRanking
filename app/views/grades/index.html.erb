@@ -10,7 +10,7 @@
 
 <div class="container container-fluid">
     <div class="table-responsive">
-    <table id="ranking" class="table table-striped table-bordered table-hover mytable">
+    <table id="ranking" class="table table-striped table-bordered table-hover mytable text-nowrap">
             <thead>
                 <th>名前</th>
                 <th>入学年度</th>
@@ -30,16 +30,16 @@
                 <% else %>
                 <tr>
                 <% end %>
-                    <td style="width: 10%"><%= grade.user[:username] %></td>
-                    <td style="width: 10%"><%= grade.user[:year] %></td>
-                    <td style="width: 10%"><%= grade.AA %></td>
-                    <td style="width: 10%"><%= grade.A %></td>
-                    <td style="width: 10%"><%= grade.B %></td>
-                    <td style="width: 10%"><%= grade.C %></td>
-                    <td style="width: 10%"><%= grade.D %></td>
-                    <td style="width: 10%"><%= grade.F %></td>
-                    <td style="width: 10%"><%= grade.GPA %></td>
-                    <td style="width: 10%"><%= grade.user[:lab] %></td>
+                    <td class="width: "><%= grade.user[:username] %></td>
+                    <td ><%= grade.user[:year] %></td>
+                    <td ><%= grade.AA %></td>
+                    <td ><%= grade.A %></td>
+                    <td ><%= grade.B %></td>
+                    <td ><%= grade.C %></td>
+                    <td ><%= grade.D %></td>
+                    <td ><%= grade.F %></td>
+                    <td ><%= grade.GPA %></td>
+                    <td ><%= grade.user[:lab] %></td>
                 </tr>
             <% end %>
             </tbody>

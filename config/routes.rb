@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root 'grades#index'
+
+  # pages
+  get 'help', to: 'pages#help'
+  get 'contact', to: 'pages#contact'
+
+  # devise
   devise_for :users, :controllers => {
     :registrations => 'users/registrations'
   }
@@ -7,6 +14,7 @@ Rails.application.routes.draw do
     get '/users', to: 'devise/registrations#new'
     get 'users/quit' => 'devise/registrations#quit'
   end
+
+  # grades
   resources :grades
-  root 'grades#index'
 end

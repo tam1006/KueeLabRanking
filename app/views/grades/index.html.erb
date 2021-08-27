@@ -1,6 +1,6 @@
 <div class="row">
   <div class="pt-5 pb-1">
-    <h1 class="text-start m-5 title-text">ランキング</h1>
+    <h1 class="text-start title">ランキング</h1>
   </div>
 </div>
 <hr class="border-dark mb-3 mt-0">
@@ -10,8 +10,8 @@
 
 <div class="container container-fluid">
     <div class="table-responsive">
-    <table id="ranking" class="table table-striped table-bordered table-hover mytable text-nowrap">
-            <thead>
+    <table id="ranking" class="table table-striped table-bordered table-hover text-nowrap">
+            <thead class="fs-4">
                 <th>名前</th>
                 <th>入学年度</th>
                 <th>A+</th>
@@ -55,7 +55,6 @@
         }
     });
     $('#ranking').DataTable({
-        // searching: false,
         autoWidth: true,
         order: [[1, 'desc'], [2, 'desc'], [3, 'desc'], [4, 'desc'], [5, 'desc'], [6, 'desc'], [7, 'desc']],
         columnDefs: [

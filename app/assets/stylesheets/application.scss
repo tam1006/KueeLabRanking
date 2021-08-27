@@ -75,6 +75,22 @@ p {
     font-size: 2em;
     line-height: 1.7em;
 }
+
+.title {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+    font-size: 3.5em;
+}
+
+.caption {
+    margin-top: 0.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+    font-size: 2em;
+}
 /* header */
 
 #logo {
@@ -124,6 +140,10 @@ th, td {
     font-size: 15px;
 }
 
+.my-text-2 {
+    font-size: 20px;
+}
+
 /* footer */
 
 .footer {
@@ -139,4 +159,9 @@ th, td {
     text-align: center;
     font-weight: lighter;
     color: white;
+}
+
+/* delete */
+.delete-text {
+    font-size: xx-small;
 }

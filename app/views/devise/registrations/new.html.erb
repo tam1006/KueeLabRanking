@@ -14,12 +14,12 @@
       <div class="col-sm-6 col-12">
         <%= f.label :username ,class: "col-sm-3 col-12 col-form-label text-sm-end" %>
         <div class="form-group col-sm-9 col-12">
-          <%= f.text_field :username, class: 'form-control' %>
+          <%= f.text_field :username, autofocus: true, class: 'form-control', maxlength: 10 %>
         </div>
         <div class="col-sm-3"></div>
         <div class="col-sm-9 col-12 form-group">
           <small class="form-text text-muted">未入力の場合匿名になります。</small>
-          <small class="form-text text-muted">本名を入れないでください。</small>
+          <small class="form-text text-muted">最大10文字です。</small>
         </div>
       </div>
       <div class="col-sm-4"></div>
@@ -30,7 +30,7 @@
       <div class="col-sm-6 col-12">
         <%= f.label :email ,class: "col-sm-3 col-12 col-form-label text-sm-end"%>
         <div class="form-group col-sm-9 col-12">
-          <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control', required: true %>
+          <%= f.email_field :email, autocomplete: 'email', class: 'form-control', required: true %>
         </div>
       </div>
       <div class="col-sm-4"></div>
@@ -45,14 +45,9 @@
                                     class: 'form-control', 
                                     required: true,
                                     minlength: @minimum_password_length,
-                                    maxlength: '30' %>
+                                    maxlength: '30',
+                                    placeholder: "半角英数6文字以上" %>
         </div>
-        <% if @minimum_password_length %>
-          <div class="col-sm-3"></div>
-          <div class="col-sm-9 col-12 form-group">
-              <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
-          </div>
-        <% end %>
       </div>
       <div class="col-sm-4"></div>
     </div>

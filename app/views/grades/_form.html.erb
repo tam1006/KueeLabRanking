@@ -1,50 +1,61 @@
-<div class="container">
 <%= form_for @grade do |f| %>
-  <%= render 'grades/error_messages', model: f.object %>
-  <div class="row text-center justify-content-md-center">
-    <div class="row col-1">
+  <div class="row justify-content-center text-sm-center text-start">
+    <%= render 'grades/error_messages', model: f.object %>
+
+    <div class="col-sm"></div>
+
+    <div class="col-sm col-12">
       <div class="form-group">
         <%= f.label "A+" %>
         <%= f.number_field :AA, class: 'form-control' %>
       </div>
     </div>
-    <div class="row col-1">
+
+    <div class="col-sm col-12">
       <div class="form-group">
         <%= f.label "A" %>
         <%= f.number_field :A, class: 'form-control' %>
       </div>
     </div>
-    <div class="row col-1">
+
+    <div class="col-sm col-12">
       <div class="form-group">
         <%= f.label "B" %>
         <%= f.number_field :B, class: 'form-control' %>
       </div>
     </div>
-    <div class="row col-1">
+
+    <div class="col-sm col-12">
       <div class="form-group">
         <%= f.label "C" %>
         <%= f.number_field :C, class: 'form-control' %>
       </div>
     </div>
-    <div class="row col-1">
+
+    <div class="col-sm col-12">
       <div class="form-group">
         <%= f.label "D" %>
         <%= f.number_field :D, class: 'form-control' %>
       </div>
     </div>
-    <div class="row col-1">
+
+    <div class="col-sm col-12">
       <div class="form-group">
         <%= f.label "F" %>
         <%= f.number_field :F, class: 'form-control' %>
       </div>
     </div>
+
+    <div class="col-sm"></div>
+
   </div>
-  <div class="row text-center justify-content-md-center">
-    <div class="col">
-        <div class="form-group">
-        <%= f.submit "提出", class: 'btn btn-primary' %>
-        </div>
+
+  <div class="row m-t justify-content-sm-center">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 form-group">
+      <%= f.submit "提出", class: 'btn btn-outline-primary btn-lg btn-block my-2' %>
     </div>
+    <div class="col-sm-3"></div>
   </div>
+
 <% end %>
-</div>

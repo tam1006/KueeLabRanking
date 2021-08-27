@@ -1,5 +1,3 @@
-
-
 <header>
   <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" aria-label="Third navbar example">
     <div class="container-fluid">
@@ -8,7 +6,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarsExample03">
-        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0 my-text">
+          <li class="nav-item">
+              <%= link_to 'トップ', root_path, class: 'nav-link active' %>
+          </li>
           <% if user_signed_in? %>
             <% if is_registered_grades? %>
             <li class="nav-item">

@@ -1,10 +1,11 @@
 <div class="row">
   <div class="pt-5 pb-1">
-    <h1 class="text-start title">ランキング</h1>
+    <h1 class="text-start title">Kuee Lab Ranking</h1>
+    <h2 class="text-start caption">研究室配属の際の参考とするため、各研究室の志望度者層を可視化するためにこのサイトを作成しました。</h2>
+    <h2 class="text-start caption">初めての方は<%= link_to '利用方法', help_path %>をご確認下さい。</h2>
   </div>
 </div>
 <hr class="border-dark mb-3 mt-0">
-
 
 <%= render 'layouts/flash_messages' %>
 
@@ -56,7 +57,7 @@
     });
     $('#ranking').DataTable({
         autoWidth: true,
-        order: [[1, 'desc'], [2, 'desc'], [3, 'desc'], [4, 'desc'], [5, 'desc'], [6, 'desc'], [7, 'desc']],
+        order: [[2, 'desc'], [3, 'desc'], [4, 'desc'], [5, 'desc'], [6, 'desc'], [7, 'desc']],
         columnDefs: [
             { targets: 1, orderData: [1, 2, 3, 4, 5, 6, 7] },
             { targets: 2, orderData: [2, 3, 4, 5, 6, 7] },

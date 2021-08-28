@@ -7,30 +7,36 @@
     <div class="collapse navbar-collapse col-9" id="navbarsExample03">
       <ul class="navbar-nav me-auto mb-2 mb-sm-0 my-text text-center">
         <li class="nav-item mx-sm-3">
-            <%= link_to 'トップ', root_path, class: 'nav-link active' %>
+          <%= link_to 'トップ', root_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item mx-sm-3">
+          <%= link_to '利用方法', help_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item mx-sm-3">
+          <a href="https://forms.gle/gXzTXfH2kyxhskJAA" target="_blank" rel="noopener noreferrer" class="nav-link active">お問い合わせ</a>
         </li>
         <% if user_signed_in? %>
           <% if is_registered_grades? %>
           <li class="nav-item mx-sm-2">
-              <%= link_to '成績編集', edit_grade_path(@grade[:id]), class: 'nav-link active' %>
+            <%= link_to '成績編集', edit_grade_path(@grade[:id]), class: 'nav-link active' %>
           </li>
           <% else %>
           <li class="nav-item mx-sm-2">
-              <%= link_to '成績入力', new_grade_path, class: 'nav-link active' %>
+            <%= link_to '成績入力', new_grade_path, class: 'nav-link active' %>
           </li>
           <% end %>
           <li class="nav-item mx-sm-2">
-              <%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link active' %>
+            <%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link active' %>
           </li>
           <li class="nav-item mx-sm-2">
-              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link active' %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link active' %>
           </li>
         <% else %>
           <li class="nav-item mx-sm-2">
-              <%= link_to "新規登録", new_user_registration_path, class: 'nav-link active' %>
+            <%= link_to "新規登録", new_user_registration_path, class: 'nav-link active' %>
           </li>
           <li class="nav-item mx-sm-2">
-              <%= link_to "ログイン", new_user_session_path, class: 'nav-link active' %>
+            <%= link_to "ログイン", new_user_session_path, class: 'nav-link active' %>
           </li>
         <% end %>
       </ul>

@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   # pages
   get 'help', to: 'pages#help'
-  get 'contact', to: 'pages#contact'
 
   # devise
   devise_for :users, :controllers => {

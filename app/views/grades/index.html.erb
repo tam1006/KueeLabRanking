@@ -20,6 +20,7 @@
                 <th>C</th>
                 <th>D</th>
                 <th>F</th>
+                <th>修得単位数</th>
                 <th>GPA</th>
                 <th>研究室</th>
             </thead>
@@ -38,6 +39,7 @@
                     <td ><%= grade.C %></td>
                     <td ><%= grade.D %></td>
                     <td ><%= grade.F %></td>
+                    <td ><%= grade.total_credit %></td>
                     <td ><%= grade.GPA %></td>
                     <td ><%= grade.user[:lab] %></td>
                 </tr>
@@ -66,7 +68,8 @@
             { targets: 5, orderData: [5, 2, 3, 4, 6, 7] },
             { targets: 6, orderData: [6, 2, 3, 4, 5, 7] },
             { targets: 7, orderData: [7, 2, 3, 4, 5, 6] },
-            { targets: 8, orderData: [8] }
+            { targets: 8, orderData: [8]},
+            { targets: 9, orderData: [9] }
         ],
         dom: "<'row'<'col-sm-6 col-12'l><'col-sm-6 col-12 text-sm-end'f>>" +
         "<'row'<'col-12'tr>>" +

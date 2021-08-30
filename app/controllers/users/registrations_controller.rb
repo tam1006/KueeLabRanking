@@ -19,9 +19,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def edit
     super
   end
-
+  
   # PUT /resource
   def update
+    is_username_blank?
     super
   end
 

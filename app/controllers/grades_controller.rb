@@ -65,7 +65,8 @@ class GradesController < ApplicationController
           credits += g[1].to_i
         end
       end
-      params[:grade][:GPA] = (gp/num_of_lecture).round(2)
+      gpa = (gp/num_of_lecture).round(2)
+      params[:grade][:GPA] = gpa.nan? ? 0.0 : gpa
       params[:grade][:total_credit] = credits
     end
 
